@@ -1,0 +1,51 @@
+#total{
+	background-color: none;
+}
+#banner{
+	/*background-color: blue;*/
+	min-height: 200px;
+}
+#login{
+	background-color: none;
+	min-height: 200px;
+}
+#menu{
+	background-color: #fe6c00;
+	min-height: 600px;
+	margin-top: 10px;
+}
+#menu ul li{
+        font-family: Gill Sans, sans-serif;
+	list-style: none;
+	margin-top: 60px
+}
+#menu ul li a{
+	text-decoration: none;
+	color: black;
+}
+#menu ul li a:hover{
+	background-color: gray;
+}
+#conteudo{
+        font-family: Gill Sans, sans-serif;
+	background-color: #fe6c00;
+	min-height: 600px;
+	margin-top: 10px;
+}
+#rodape{
+	background-color: #fe6c00;
+	min-height: 100px;
+	margin-top: 10px;
+}
+h4{
+    margin-left: 10px;
+}
+h2{
+    margin-left: 10px;
+}
+table{
+    margin-left: 10px;
+}
+h5{
+    margin-left: 10px;
+}
