@@ -1,22 +1,19 @@
 <?php
-//mysqli_close($connect);
-$connect = mysqli_connect('localhost','root','Ginha9201','projeto_livro');
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-  if(isset($_POST["txtTitulo"])){
-  $titulo = $_POST["txtTitulo"];
-  }
-  if(isset($_POST["txtDescricao"])){
-  $descricao = $_POST["txtDescricao"];
-  }
-  if(isset($_POST["txtQuantidade"])){
-  $quantidade =(int)$_POST["txtQuantidade"];
-  }
-  if(isset($_POST["txtISBN"])){
-  $isbn = $_POST["txtISBN"];
-  }
+include 'conexao.php';
+$connect = conexao();
+
+if(isset($_POST["txtTitulo"])){
+$titulo = $_POST["txtTitulo"];
+}
+if(isset($_POST["txtDescricao"])){
+$descricao = $_POST["txtDescricao"];
+}
+if(isset($_POST["txtQuantidade"])){
+$quantidade =(int)$_POST["txtQuantidade"];
+}
+if(isset($_POST["txtISBN"])){
+$isbn = $_POST["txtISBN"];
+}
 ?>
 
 <html>

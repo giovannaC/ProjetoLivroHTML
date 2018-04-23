@@ -1,11 +1,7 @@
 <?php
-//mysqli_close($connect);
-$connect = mysqli_connect('localhost','root','Ginha9201','projeto_livro');
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-  
+include 'conexao.php';
+$connect = conexao();
+
 $sql = "SELECT * FROM genero";
 $result = mysqli_query($connect,$sql);
 ?>
