@@ -43,7 +43,7 @@ $result = mysqli_query($connect,$sql);
 
 			<div id="conteudo" class="grid_12">
                             <img src="imagens/livro.png" height="200" width="200" align="right">
-                            <h2>Livros</h2>
+                            <h2>Generos</h2>
                             <?php
                             while ($row = mysqli_fetch_assoc($result)) {
                             echo "<table border=2>";
