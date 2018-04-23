@@ -53,7 +53,7 @@ $connect = conexao();
                                     if($insert){
                                        echo "<br><br>Cadastro efetuado com sucesso!<br>";
                                     }else{
-                                        echo "ERRO --- Cadastro não efetuado! " . mysqli_error($connect);
+                                        echo "<br><br>ERRO --- Cadastro não efetuado! " . mysqli_error($connect);
                                     }
                                 }
                                 ?>

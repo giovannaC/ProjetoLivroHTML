@@ -88,9 +88,9 @@ $isbn = $_POST["txtISBN"];
                                         . " VALUES ('$titulo','$descricao','$quantidade','$isbn','$autorId')";
                                 $insert = mysqli_query($connect,$sqlCadastro);
                                 if($insert){
-                                    echo "Cadastro efetuado com sucesso!";
+                                    echo "<br><br>Cadastro efetuado com sucesso!";
                                 }else{
-                                    echo "ERRO --- Cadastro não efetuado! " . mysqli_error($connect);
+                                    echo "<br><br>ERRO --- Cadastro não efetuado! " . mysqli_error($connect);
                                 }
                             }
 
