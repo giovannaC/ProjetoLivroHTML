@@ -46,11 +46,12 @@ $connect = conexao();
                                     <input type="submit" name="btnCadastro" value="Cadastrar"/>
                                 </form>
                                 <?php
-                                if(isset($nome) != NULL){
+                                if(isset($_POST["txtNome"])){
+                                    $nome = $_POST["txtNome"];
                                     $sqlCadastro = "INSERT INTO autor (nome) VALUES ('$nome')";
                                     $insert = mysqli_query($connect,$sqlCadastro);
                                     if($insert){
-                                       echo "Cadastro efetuado com sucesso!";
+                                       echo "<br><br>Cadastro efetuado com sucesso!<br>";
                                     }else{
                                         echo "ERRO --- Cadastro não efetuado! " . mysqli_error($connect);
                                     }
