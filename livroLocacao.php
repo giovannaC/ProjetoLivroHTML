@@ -56,7 +56,7 @@ $connect = conexao();
                             <?php
                             if(isset($_POST["txtTitulo"])){
                                 $titulo = $_POST["txtTitulo"];
-                                echo "Titulo locado: ". $titulo . "<br>";
+                                echo "<br><br>Titulo locado: ". $titulo . "<br>";
                                 $sqlBusca = "SELECT * FROM livro WHERE titulo = '$titulo'";
                                 $result = mysqli_query($connect, $sqlBusca);
                                 if($result){
@@ -98,14 +98,13 @@ $connect = conexao();
                                             echo "Autor = " . $autor["nome"] . "<br></td><br></table>";
                                         }
                                     }else{
-                                        echo "Quantidade do livro: " . $quantidade . "<br>";
                                         $quantidade_dispo = ((int)$quantidade) - 1;
-                                        echo "Quantidade disponivel: ELSE " . $quantidade_dispo . "<br>";
+                                        echo "Quantidade disponivel: " . $quantidade_dispo . "<br>";
                                         $sqlElse = "REPLACE INTO locado"
                                             . " VALUES ('$livroId','$quantidade_dispo')";
                                         $resultElse = mysqli_query($connect,$sqlElse);
                                         if($resultElse){
-                                            echo "<br>Locação eetuada com seucesso!! <br>";
+                                            echo "<br>Locação efetuada com seucesso!! <br>";
                                         }else{
                                             echo "<br>ERRO --- " . mysqli_error($connect);
                                         }

@@ -56,7 +56,7 @@ $connect = conexao();
                             <?php
                             if(isset($_POST["txtTitulo"])){
                                 $titulo = $_POST["txtTitulo"];
-                                echo "Entro em titulo: ". $titulo . "<br>";
+                                echo "<br><br>Titulo devolvido: ". $titulo . "<br>";
                                 $sqlBusca = "SELECT * FROM livro WHERE titulo = '$titulo'";
                                 $result = mysqli_query($connect, $sqlBusca);
                                 if($result){
@@ -85,7 +85,7 @@ $connect = conexao();
                                                     echo "<br>ERRO --- " . mysqli_error($connect);
                                                 }
                                         }else{
-                                            echo "Não há locações para este livro!! <br>";
+                                            echo "<br>Não há locações para este livro!! <br>";
                                             echo "<table border>";
                                             echo "<td><b>Titulo = " . $row["titulo"]. "</b><br>";
                                             echo "Descriçao = " . $row["descricao"] . "<br>";
