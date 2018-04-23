@@ -47,7 +47,7 @@ $connect = conexao();
                                 <input type="submit" name="btnCadastro" value="Cadastrar"/>
                             </form>
                             <?php
-                            if(isset($descricao)){
+                            if(isset($_POST["txtGenero"])){
                                 $descricao = $_POST["txtGenero"];
                                 $sqlCadastro = "INSERT INTO genero (descricao) VALUES ('$descricao')";
                                 $insert = mysqli_query($connect,$sqlCadastro);
